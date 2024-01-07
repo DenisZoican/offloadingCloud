@@ -7,7 +7,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["Offloading.csproj", "Offloading/"]
+COPY ["Offloading/Offloading.csproj", "Offloading/"]
 RUN dotnet restore "Offloading/Offloading.csproj"
 COPY . .
 WORKDIR "/src/Offloading"
